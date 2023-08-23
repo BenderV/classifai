@@ -1,0 +1,30 @@
+[{
+    "name": "LIST_ITEMS",
+    "description": "List data to be labeled",
+    "parameters": {
+        "type": "object",
+        "properties": {
+          "search": {
+            "type": "string",
+            "description": "The keyword to be searched for. If None, all data will be listed."
+          }
+        }
+    }
+},{
+    "name": "LABEL_ITEMS",
+    "description": "Label a single data point",
+    "parameters": {
+        "type": "object",
+        "properties": {
+          "ids": {
+            "type": "string",
+            "description": "The ids of the data point to be labeled. Separate multiple ids with comma."
+          },
+          "label": {
+            "type": "string",
+            "description": "The label to be assigned to the data point."
+          }
+        },
+        "required": ["ids"]
+      }
+}]
