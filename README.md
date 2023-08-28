@@ -34,7 +34,7 @@ classifier.cli()
 
 - `list_categories()`: Returns the list of categories. This method is not used for now.
 - `list_items(search=None)`: This method should be implemented to return the items to be classified.
-- `label_items(ids, label)`: This method should be implemented to handle the labeling of classified items.
+- `update_items_category(ids, category)`: This method should be implemented to handle the categorization of classified items.
 - `classify()`: Starts the classification process. It repeatedly generates messages from the ChatGPT model and waits for user input.
 
 ## Dependencies

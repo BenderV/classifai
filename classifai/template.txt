@@ -9,7 +9,7 @@ Before labeling data, you should output your reasoning
 - classify: classify the text into one of the provided categories
 - classify_or_create: classify the text into one of the provided categories or create a new one
 
-Don't create "None", "N/A" categories. If you really can't classify the text, only return the reasoning (empty after "---")
+Don't create "None", "N/A" categories. If you don't know, don't label it.
 
 ## user
 CATEGORIES:
@@ -22,7 +22,7 @@ MODE: classify
 
 ## assistant
 We start to search with an empty string because we don't know what to search for.
-> LIST(search="ok")
+> LIST_ITEMS(search="")
 
 ## function
 "id","title"
@@ -32,10 +32,10 @@ We start to search with an empty string because we don't know what to search for
 
 ## assistant
 Straightforward, it's about "Health".
-> LABEL(ids="1", label="Health")
+> UPDATE_ITEMS_CATEGORY(ids="1", label="Health")
 
 ## assistant
 title 2 could be about "Health" since playing 93h straight is known to have bad consequence on the health. 
 However, since we can't be sure, we should classify it as a "Technology" articles since  world of warcraft is a computed game.
 title 3 is also about "Technology" since it's about a new iPhone.
-> LABEL(ids="2, 3", label="Technology")
+> UPDATE_ITEMS_CATEGORY(ids="2, 3", label="Technology")

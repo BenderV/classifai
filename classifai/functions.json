@@ -1,18 +1,30 @@
 [{
     "name": "LIST_ITEMS",
-    "description": "List data to be labeled",
+    "description": "List data to be labeled. If there is too much data, only a part of it will be listed.",
     "parameters": {
         "type": "object",
         "properties": {
           "search": {
             "type": "string",
             "description": "The keyword to be searched for. If None, all data will be listed."
+          },
+          "with_category": {
+            "type": "boolean",
+            "description": "Whether to list the data with category. If True, the data with category will be listed."
+          },
+          "offset": {
+            "type": "integer",
+            "description": "The offset of the data to be listed. If None, the first data will be listed."
+          },
+          "limit": {
+            "type": "integer",
+            "description": "Set the maximum number of data to be listed. If None, all data will be tried to be listed."
           }
         }
     }
 },{
-    "name": "LABEL_ITEMS",
-    "description": "Label a single data point",
+    "name": "UPDATE_ITEMS_CATEGORY",
+    "description": "Update the category of data",
     "parameters": {
         "type": "object",
         "properties": {
@@ -20,11 +32,35 @@
             "type": "string",
             "description": "The ids of the data point to be labeled. Separate multiple ids with comma."
           },
-          "label": {
+          "category": {
             "type": "string",
             "description": "The label to be assigned to the data point."
           }
-        },
-        "required": ["ids"]
+        }
       }
+},{
+  "name": "LIST_CATEGORIES",
+  "description": "List all categories",
+  "parameters": {
+      "type": "object",
+      "properties": {
+        "search": {
+          "type": "string",
+          "description": "The keyword to be searched for. If None, all categories will be listed."
+        }
+      }
+  }
+},{
+  "name": "CREATE_CATEGORY",
+  "description": "Create a new category",
+  "parameters": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "The name of the category to be added."
+        }
+      }
+  }
 }]
+  

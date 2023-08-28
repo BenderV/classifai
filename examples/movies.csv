@@ -1,4 +1,23 @@
-id,title,author,rating
-1,The Godfather,Francis Ford Coppola,9.2
-2,The Shawshank Redemption,Frank Darabont,9.3
-3The Dark Knight,Christopher Nolan,9
+"id","title","author","rating"
+"1","The Godfather","Francis Ford Coppola","9.2"
+"2","The Shawshank Redemption","Frank Darabont","9.3"
+"3","The Dark Knight","Christopher Nolan","9"
+"4","Before Sunrise","Richard Linklater","8.1"
+"5","The Lord of the Rings: The Return of the King","Peter Jackson","8.9"
+"6","The Lord of the Rings: The Fellowship of the Ring","Peter Jackson","8.8"
+"7","The Lord of the Rings: The Two Towers","Peter Jackson","8.7"
+"8","The Hobbit: An Unexpected Journey","Peter Jackson","7.9"
+"9","The Hobbit: The Desolation of Smaug","Peter Jackson","7.8"
+"10","The Hobbit: The Battle of the Five Armies","Peter Jackson","7.4"
+"11","The Matrix","The Wachowski Brothers","8.7"
+"12","The Matrix Reloaded","The Wachowski Brothers","7.2"
+"13","The Matrix Revolutions","The Wachowski Brothers","6.7"
+"14","The Terminator","James Cameron","8"
+"15","Love Actually","Richard Curtis","7.7"
+"16","The Bourne Identity","Doug Liman","7.9"
+"17","The Bourne Supremacy","Paul Greengrass","7.8"
+"18","The Bourne Ultimatum","Paul Greengrass","8"
+"20","True Lies","James Cameron","7.2"
+"21","The Terminator 2: Judgment Day","James Cameron","8.5"
+"22","Passion of Mind","Alain Berliner","5.6"
+"23","The Lake House","Alejandro Agresti","6.8"
