@@ -29,6 +29,12 @@ class Classifier:
         :param strict_mode: If True, only classifies into the provided categories. If False, can suggest a new category.
         """
         self.data = data
+
+        # add id column if not present
+        if "id" not in self.data[0]:
+            for i, row in enumerate(self.data):
+                row["id"] = i
+
         self.category_column = category_column
         # if category_column not in self.data, add it
         if category_column not in self.data[0]:
@@ -104,7 +110,7 @@ class Classifier:
         if category not in self.categories:
             raise ValueError(f"Category {category} does not exist.")
         for item in self.data:
-            if item["id"] in ids:
+            if str(item["id"]) in ids:
                 item[self.category_column] = category
         self.on_data_update()
 
@@ -117,7 +123,7 @@ class Classifier:
         """
         pass
 
-    def classify(self):
+    def cli(self):
         text = ""
         for _ in range(100):  # We don't like infinite loops
             try:
@@ -154,5 +160,5 @@ class CSVClassifier(Classifier):
     def on_data_update(self):
         self.write_csv()
 
-    def classify(self):
-        return super().classify()
+    def cli(self):
+        return super().cli()
